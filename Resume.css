@@ -1,0 +1,284 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f4f4f4;
+  color: #555;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.45;
+  padding: 30px;
+}
+
+.resume {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  background: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.header {
+  position: relative;
+  min-height: 265px;
+  padding: 75px 40px 50px;
+  text-align: center;
+  border-top: 1px solid #555;
+  border-bottom: 1px solid #777;
+  overflow: hidden;
+}
+
+.header h1 {
+  position: relative;
+  z-index: 2;
+  color: #4f5052;
+  font-size: clamp(38px, 5vw, 58px);
+  font-weight: 600;
+  letter-spacing: 8px;
+}
+
+.job-title {
+  position: relative;
+  z-index: 2;
+  margin-top: 10px;
+  color: #555;
+  font-size: 18px;
+  letter-spacing: 5px;
+}
+
+.signature {
+  position: absolute;
+  left: 50%;
+  top: 45px;
+  transform: translateX(-50%) rotate(-8deg);
+  color: #d7d7d7;
+  font-family: "Brush Script MT", cursive;
+  font-size: 80px;
+  font-style: italic;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 32% 68%;
+}
+
+.sidebar {
+  border-right: 1px solid #777;
+}
+
+.sidebar section,
+.main-content > section {
+  padding: 30px 35px;
+  border-bottom: 1px solid #777;
+}
+
+.sidebar section:last-child {
+  border-bottom: 0;
+}
+
+h2 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: #4f5052;
+  font-size: 25px;
+  letter-spacing: 5px;
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+
+h2::before {
+  content: "";
+  width: 38px;
+  height: 38px;
+  background: #e7e7e7;
+  border-radius: 50%;
+  position: absolute;
+  left: -11px;
+  z-index: 0;
+}
+
+h2 {
+  padding-left: 0;
+}
+
+h2::after {
+  content: "";
+}
+
+h2 {
+  z-index: 1;
+}
+
+h2 {
+  isolation: isolate;
+}
+
+h2::before {
+  z-index: -1;
+}
+
+.contact-list,
+.bullet-list {
+  list-style: none;
+}
+
+.contact-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 11px 0;
+  font-size: 15px;
+}
+
+.contact-list span {
+  width: 22px;
+  text-align: center;
+  color: #555;
+  font-weight: bold;
+}
+
+.education-item {
+  margin-bottom: 28px;
+}
+
+.education-item:last-child {
+  margin-bottom: 0;
+}
+
+.education-item strong {
+  font-size: 15px;
+  color: #555;
+}
+
+.education-item h3 {
+  margin: 3px 0 8px;
+  font-size: 15px;
+  color: #555;
+}
+
+.education-item p,
+.bullet-list li {
+  font-size: 15px;
+  margin: 5px 0;
+}
+
+.bullet-list {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.main-content {
+  min-width: 0;
+}
+
+.profile p {
+  font-size: 16px;
+  text-align: justify;
+}
+
+.job {
+  margin-bottom: 40px;
+}
+
+.job:last-child {
+  margin-bottom: 0;
+}
+
+.job-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 12px;
+}
+
+.job-heading h3 {
+  color: #555;
+  font-size: 18px;
+}
+
+.job-heading p {
+  font-size: 17px;
+  margin-top: 3px;
+}
+
+.job-heading > span {
+  flex-shrink: 0;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+.job ul {
+  padding-left: 25px;
+}
+
+.job li {
+  padding-left: 5px;
+  margin: 6px 0;
+  font-size: 15.5px;
+  text-align: justify;
+}
+
+@media (max-width: 750px) {
+  body {
+    padding: 10px;
+  }
+
+  .header {
+    min-height: 210px;
+    padding: 55px 20px 35px;
+  }
+
+  .header h1 {
+    font-size: 34px;
+    letter-spacing: 5px;
+  }
+
+  .job-title {
+    font-size: 13px;
+    letter-spacing: 3px;
+  }
+
+  .signature {
+    font-size: 60px;
+    top: 35px;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    border-right: 0;
+  }
+
+  .sidebar section,
+  .main-content > section {
+    padding: 25px;
+  }
+
+  .job-heading {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .job-heading > span {
+    order: -1;
+  }
+}
+
+@media print {
+  body {
+    background: #fff;
+    padding: 0;
+  }
+
+  .resume {
+    box-shadow: none;
+    max-width: none;
+  }
+}

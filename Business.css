@@ -1,0 +1,24 @@
+/* General page style */
+body {
+    margin: 0;
+    padding: 40px;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+/* Image container style */
+img {
+    width: 350px;
+    height: 250px;
+    object-fit: cover;
+    margin: 15px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+/* Image hover effect */
+img:hover {
+    transform: scale(1.05);
+}
